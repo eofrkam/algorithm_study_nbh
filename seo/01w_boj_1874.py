@@ -14,7 +14,7 @@ for i in range(n):
     num = int(sys.stdin.readline())
     ex_arr[i] = num
 
-
+for i in range(n):
 
 
 
