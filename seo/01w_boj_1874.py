@@ -1,44 +1,30 @@
 import sys
 
-arr9 = []       # TEST1
-arr2 = []       # TEST2
-
 base = []
-arr = []        # 풀이에 사용할 리스트
-ex_arr = []     # 예제 수열
-print_arr = []  # +- 출력 내용을 저장한 리스트
+arr = []
+ex_arr = []
+print_arr = []
 
 n = int(sys.stdin.readline())
 for i in range(n):
     num = int(sys.stdin.readline())
     ex_arr.append(num)
 
-i = 0
+i = 1
 j = 0
-while i < n:
-    base.append(i+1)
-    print("+")
-    if base[i] == ex_arr[j]:
+base.append(0)
+while j != n:
+    if i-1 > n:
+        print("NO")
+        exit()
+    if base[-1] == ex_arr[j]:
+        print_arr.append("-")
         arr.append(base.pop())
         j += 1
-        print("-")
         continue
+    base.append(i)
+    print_arr.append("+")
     i += 1
 
-print(base)
-print(arr)
-
-# i = 0
-# j = 0
-# while 1:
-#     if j == n:
-#         break
-#     if i < ex_arr[j]:
-#         i += 1
-#     elif i == ex_arr[j]:
-#         arr.append(i)
-#         j += 1
-#     elif i > ex_arr[j]:
-#         i -= 1
-#
-# print(arr)
+for i in range(len(print_arr)):
+    print(print_arr[i])
