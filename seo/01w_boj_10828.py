@@ -1,7 +1,8 @@
 import sys
 
-n = int(sys.stdin.readline())
 arr = []
+
+n = int(sys.stdin.readline())
 for i in range(n):
     istr = sys.stdin.readline().split()
 
