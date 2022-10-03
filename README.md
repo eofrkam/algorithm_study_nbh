@@ -8,7 +8,7 @@
 4. [스택 수열](https://www.acmicpc.net/problem/1874)
 5. [오큰수](https://www.acmicpc.net/problem/17298)
 
-# 2주차 - 큐 덱
+# 2주차 - 큐, 덱
 1. [큐 2](https://www.acmicpc.net/problem/18258)
 2. [카드2](https://www.acmicpc.net/problem/2164)
 3. [요세푸스 문제0](https://www.acmicpc.net/problem/11866)
