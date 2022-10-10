@@ -1,66 +1,53 @@
-#include <stdio.h>
-#include <string.h>
+#include <stack>
+#include <iostream>
+#include <string>
 
-int stack[10001];
-int stack_size = 0;
+using namespace std;
 
-void push(int data)
+int main(void)
 {
-    stack[stack_size] = data;
-    stack_size +=1;
-}
+    int n;
+    cin >> n;
 
-int empty()
-{
-    if (stack_size == 0)
-        return 1;
-    return 0;
-}
+    stack<int> stack;
+    string str;
 
-int pop()
-{
-    if (empty())
-        return -1;
-    stack_size -= 1;
-    return stack[stack_size];
-}
-
-int top()
-{
-    if(empty())
-        return -1;
-    return stack[stack_size-1];
-}
-
-int main()
-{
-    int N = 0, data = 0;
-    char command[5] = {0,};
-
-    scanf("%d",&N);
-
-    for(int i=0;i<N; i++)
+    for(int i = 0; i < n; i++)
     {
-        scanf("%s",command);
+        cin >> str;
 
-        if (!strcmp(command,"push"))
+        if (str == "push")
         {
-            scanf("%d",&data);
-            push(data);
+            int num;
+            cin >> num;
+            stack.push(num);
         }
-        else if(!strcmp(command,"pop"))
+        else if (str == "pop")
         {
-            printf("%d\n",pop());
+            if (!stack.empty()) 
+            {
+                cout << stack.top() << endl;
+                stack.pop();    
+            }
+            else
+                cout <<"-1" << endl;
         }
-        else if(!strcmp(command,"empty"))
+        else if (str == "size")
+            cout << stack.size() << endl;
+        else if (str == "empty")
         {
-            printf("%d\n",empty());
+            if (stack.empty())
+                cout << "1" << endl;
+            else
+                cout << "0" << endl;
         }
-        else if(!strcmp(command,"size"))
-            printf("%d\n",stack_size);
-        else if(!strcmp(command,"top"))
-            printf("%d\n",top());
+        else if (str == "top")
+        {
+            if(!stack.empty())
+                cout << stack.top() << endl;
+            else
+                cout << "-1" << endl;
+        }
     }
-
     return 0;
 }
