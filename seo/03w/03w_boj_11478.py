@@ -8,7 +8,6 @@ for i in range(len(s)):
         com.add(s[i:j+1])
 print(len(com))
 
-
 # s = list(sys.stdin.readline().strip())
 # com = set()
 # s_len = len(s)
