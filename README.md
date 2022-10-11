@@ -24,5 +24,5 @@
 5. [통계학](https://www.acmicpc.net/problem/2108)
 
 # 응용 문제
-3. seo-[랜선 자르기](https://www.acmicpc.net/problem/1654)
+3. [랜선 자르기](https://www.acmicpc.net/problem/1654)(seo)
 3. ju-[]()
