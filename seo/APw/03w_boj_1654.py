@@ -1,7 +1,11 @@
 import sys
 
 k, n = map(int, sys.stdin.readline().split())
-k_list = list(map(int, sys.stdin.readline().split()))
+k_list = []
+for i in range(k):
+    num = int(sys.stdin.readline())
+    k_list.append(num)
+k_list.sort()
 
 res = 0
 for i in range(len(k_list)):
@@ -14,7 +18,7 @@ l_mid = (l_min + l_max) // 2
 while l_min <= l_max:
     k_len = 0
     l_mid = (l_min + l_max) // 2
-    for i in range(k):
+    for i in range(len(k_list)):
         k_len += k_list[i] // l_mid
     if k_len == n:
         break
