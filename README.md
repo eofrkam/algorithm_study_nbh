@@ -23,4 +23,6 @@
 4. [수 정렬하기 2](https://www.acmicpc.net/problem/2751)
 5. [통계학](https://www.acmicpc.net/problem/2108)
 
-
+# 응용 문제
+3. seo-[랜선 자르기](https://www.acmicpc.net/problem/1654)
+3. ju-[]()
