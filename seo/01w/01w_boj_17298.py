@@ -1,30 +1,19 @@
 import sys
 
-nge = []
 arr = []
-
-pos = []
+nge = []
 
 n = int(sys.stdin.readline())
 base = list((map(int, sys.stdin.readline().split())))
 
-arr.append(base[0])
-i = 1
-while len(nge) != len(base):
-    if i != len(base):
-        arr.append(base[i])
-    print(i, arr)
-    i += 1
-    if arr[-1] > arr[-2]:
-        nge.append(arr.pop())
-    elif arr[-1] <= arr[-2]:
-        pos.append(base.index(arr[-1]))
-    print(arr)
-    print(nge)
-    print(pos)
-    print()
+for i in range(n):
+    nge.append(-1)
 
-print("----------")
+for i in range(n):
+    while arr and base[arr[-1]] < base[i]:
+        nge[arr.pop()] = base[i]
+    arr.append(i)
+
 print(*nge)
 
 
