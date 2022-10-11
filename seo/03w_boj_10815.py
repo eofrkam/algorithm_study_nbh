@@ -25,3 +25,8 @@ for i in range(len(m_list)):
 
 for i in range(len(print_list)):
     print(print_list[i], end=' ')
+
+# N = int(input())
+# h = set(input().split())
+# M = int(input())
+# print(*[(i in h)*1 for i in input().split()])
