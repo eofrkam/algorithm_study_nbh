@@ -7,33 +7,25 @@ for i in range(k):
     k_list.append(num)
 k_list.sort()
 
-res = 0
-for i in range(len(k_list)):
-    res += k_list[i]
+if k == n and k_list[0] == k_list[-1]:
+    print(k_list[0])
+    exit()
 
-l_min = 1
-l_max = (res // n)
-l_mid = (l_min + l_max) // 2
+k_min = k_list[0] // n
+k_max = k_list[-1]
+k_mid = (k_min + k_max) // 2
 
-while l_min <= l_max:
+flag = 2
+while k_min + 1 < k_max:
     k_len = 0
-    l_mid = (l_min + l_max) // 2
+    k_mid = (k_min + k_max) // 2
     for i in range(len(k_list)):
-        k_len += k_list[i] // l_mid
-    if k_len == n:
-        break
-    elif k_len > n:
-        l_min = l_mid + 1
+        k_len += k_list[i] // k_mid
+    if n <= k_len:
+        flag = 1
+        k_min = k_mid
     else:
-        l_max = l_mid - 1
+        flag = 0
+        k_max = k_mid
 
-while l_mid <= l_max:
-    k_len = 0
-    l_mid += 1
-    for i in range(k):
-        k_len += k_list[i] // l_mid
-    if k_len != n:
-        l_mid -= 1
-        break
-
-print(l_mid)
+print(k_min)
