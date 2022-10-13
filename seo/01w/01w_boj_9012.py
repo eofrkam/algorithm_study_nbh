@@ -1,12 +1,12 @@
 import sys
 
-ps = []
+T = int(sys.stdin.readline())
 
-t = int(sys.stdin.readline())
-for i in range(t):
-    flag = 0
-    arr = []
+ps = []
+for i in range(T):
     ps = str(sys.stdin.readline().split())
+    arr = []
+    flag = 0
     for j in range(len(ps)):
         if ps[j] == "(":
             arr.append(ps[j])

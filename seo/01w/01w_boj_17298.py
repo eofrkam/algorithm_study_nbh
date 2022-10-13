@@ -5,15 +5,15 @@ import sys
 arr = []
 nge = []
 
-n = int(sys.stdin.readline())
-base = list((map(int, sys.stdin.readline().split())))
+N = int(sys.stdin.readline())
+A = list((map(int, sys.stdin.readline().split())))
 
-for i in range(n):
+for i in range(N):
     nge.append(-1)
 
-for i in range(n):
-    while arr and base[arr[-1]] < base[i]:
-        nge[arr.pop()] = base[i]
+for i in range(N):
+    while arr and A[arr[-1]] < A[i]:
+        nge[arr.pop()] = A[i]
     arr.append(i)
 
 print(*nge)

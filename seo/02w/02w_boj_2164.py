@@ -1,14 +1,14 @@
 from collections import deque
 import sys
 
-arr = deque([])
+N = int(sys.stdin.readline())
 
-n = int(sys.stdin.readline())
-for i in range(n, 0, -1):
-    arr.append(i)
+q = deque()
+for i in range(1, N+1):
+    q.append(i)
 
-while len(arr) > 1:
-    arr.pop()
-    arr.appendleft(arr.pop())
+while len(q) > 1:
+    q.popleft()
+    q.append(q.popleft())
 
-print(arr[0])
+print(*q)

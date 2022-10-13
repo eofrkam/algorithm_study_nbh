@@ -1,30 +1,26 @@
 import sys
 
+N = int(sys.stdin.readline())
+
+stack = [0]
 base = []
-arr = []
-ex_arr = []
-print_arr = []
-
-n = int(sys.stdin.readline())
-for i in range(n):
+print_list = []
+for i in range(N):
     num = int(sys.stdin.readline())
-    ex_arr.append(num)
+    base.append(num)
 
-i = 1
-j = 0
-base.append(0)
-while j != n:
-    if i-1 > n:
+i, j = 1, 0
+while j != N:
+    if i-1 > N:                 # 계산 실패
         print("NO")
         exit()
-    if base[-1] == ex_arr[j]:
-        print_arr.append("-")
-        arr.append(base.pop())
+    if stack[-1] == base[j]:    # stack의 top이 base[j]의 value 일때
+        print_list.append("-")
+        stack.pop()
         j += 1
-        continue
-    base.append(i)
-    print_arr.append("+")
-    i += 1
+    else:                       # 아닐때
+        stack.append(i)
+        print_list.append("+")
+        i += 1
 
-for i in range(len(print_arr)):
-    print(print_arr[i])
+print(*print_list, sep='\n')

@@ -1,33 +1,33 @@
 from collections import deque
 import sys
 
-arr = deque([])
+N = int(sys.stdin.readline())
 
-n = int(sys.stdin.readline())
-for i in range(n):
-    istr = sys.stdin.readline().split()
+q = deque()
+for i in range(N):
+    order = sys.stdin.readline().split()
 
-    if istr[0] == "push":
-        arr.append(istr[1])
-    elif istr[0] == "pop":
-        if len(arr) == 0:
+    if order[0] == "push":
+        q.append(order[1])
+    elif order[0] == "pop":
+        if len(q) == 0:
             print(-1)
         else:
-            print(arr.popleft())
-    elif istr[0] == "size":
-        print(len(arr))
-    elif istr[0] == "empty":
-        if len(arr) == 0:
+            print(q.popleft())
+    elif order[0] == "size":
+        print(len(q))
+    elif order[0] == "empty":
+        if len(q) == 0:
             print(1)
         else:
             print(0)
-    elif istr[0] == "front":
-        if len(arr) == 0:
+    elif order[0] == "front":
+        if len(q) == 0:
             print(-1)
         else:
-            print(arr[0])
-    elif istr[0] == "back":
-        if len(arr) == 0:
+            print(q[0])
+    elif order[0] == "back":
+        if len(q) == 0:
             print(-1)
         else:
-            print(arr[-1])
+            print(q[-1])

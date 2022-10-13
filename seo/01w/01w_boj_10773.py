@@ -1,9 +1,9 @@
 import sys
 
-arr = []
+K = int(sys.stdin.readline())
 
-k = int(sys.stdin.readline())
-for i in range(k):
+arr = []
+for i in range(K):
     n = int(sys.stdin.readline())
 
     if n != 0:
@@ -11,7 +11,4 @@ for i in range(k):
     else:
         arr.pop()
 
-res = 0
-for i in range(len(arr)):
-    res += arr[i]
-print(res)
+print(sum(arr))

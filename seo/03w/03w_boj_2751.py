@@ -1,8 +1,9 @@
 import sys
 
-n = int(sys.stdin.readline())
+N = int(sys.stdin.readline())
+
 n_list = []
-for i in range(n):
+for i in range(N):
     num = int(sys.stdin.readline())
     n_list.append(num)
 
