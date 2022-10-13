@@ -1,3 +1,5 @@
+# !clear
+
 import sys
 
 arr = []
