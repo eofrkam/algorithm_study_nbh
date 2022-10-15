@@ -16,11 +16,15 @@
 5. [덱](https://www.acmicpc.net/problem/10866)
 6. [회전하는 큐](https://www.acmicpc.net/problem/1021)
 
-# 3주차 - 집합, 정렬
+# 3주차 - 이분탐색, 집합, 정렬
 1. [숫자 카드](https://www.acmicpc.net/problem/10815)
 2. [숫자 카드 2](https://www.acmicpc.net/problem/10816)
 3. [서로 다른 부분 문자열의 개수](https://www.acmicpc.net/problem/11478)
 4. [수 정렬하기 2](https://www.acmicpc.net/problem/2751)
 5. [통계학](https://www.acmicpc.net/problem/2108)
 
-
+# 응용 문제
+3. [랜선 자르기](https://www.acmicpc.net/problem/1654)(03w_seo)
+4. [N-queen](https://www.acmicpc.net/problem/9663)(03w_ju)
+5. [스도쿠](https://www.acmicpc.net/problem/2580)(04w_mo)
+6. [-]()(04w_ri)
