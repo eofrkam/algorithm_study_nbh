@@ -26,5 +26,5 @@
 # 응용 문제
 3. [랜선 자르기](https://www.acmicpc.net/problem/1654)(03w_seo)
 4. [N-queen](https://www.acmicpc.net/problem/9663)(03w_ju)
-5. [-]()(04w_mo)
+5. [스도쿠](https://www.acmicpc.net/problem/2580)(04w_mo)
 6. [-]()(04w_ri)
