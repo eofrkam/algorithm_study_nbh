@@ -26,7 +26,7 @@ algorithm_study_nbh - 자료구조와 알고리즘 문제를 해결합니다.
   01. [랜선 자르기](https://www.acmicpc.net/problem/1654)(03w_seo)
   02. [N-queen](https://www.acmicpc.net/problem/9663)(03w_ju)
   03. [스도쿠](https://www.acmicpc.net/problem/2580)(04w_mo)
-  04. [-](https://)(04w_ri)
+  04. [어두운 굴다리](https://www.acmicpc.net/problem/17266)(04w_ri)
   05. [-](https://)(05w_seo)
   06. [-](https://)(05w_ju)
   <!--07. [-](https://)(06w_mo)-->
