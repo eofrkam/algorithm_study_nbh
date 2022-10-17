@@ -1,6 +1,7 @@
 algorithm_study_nbh
-자료구조와 알고리즘 문제를 해결합니다.
 ===
+자료구조와 알고리즘 문제를 해결합니다.
+---
 # 1주차 - 스택
   01. [스택](https://www.acmicpc.net/problem/10828)
   02. [제로](https://www.acmicpc.net/problem/10773)
