@@ -22,6 +22,13 @@ algorithm_study_nbh - 자료구조와 알고리즘 문제를 해결합니다.
   04. [수 정렬하기 2](https://www.acmicpc.net/problem/2751)
   05. [통계학](https://www.acmicpc.net/problem/2108)
 
+# 4주차 - 재귀, 백트래킹
+  01. [재귀함수가 뭔가요?](https://www.acmicpc.net/problem/17478)
+  02. [N과 M(1)](https://www.acmicpc.net/problem/15649)
+  03. [N과 M(2)](https://www.acmicpc.net/problem/15650)
+  04. [블랙잭](https://www.acmicpc.net/problem/2798)
+  05. [연산자 끼워넣기](https://www.acmicpc.net/problem/14888)
+
 # 응용 문제
   01. [랜선 자르기](https://www.acmicpc.net/problem/1654)(03w_seo)
   02. [N-queen](https://www.acmicpc.net/problem/9663)(03w_ju)
