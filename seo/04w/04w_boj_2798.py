@@ -1,11 +1,5 @@
 import sys
 
-N, M = map(int, sys.stdin.readline().split())
-Card = list(map(int, sys.stdin.readline().split()))
-Arr = [0] * 3
-used = [0] * N
-apx = 0
-
 
 def black_jack(n, m, card, arr, length):
     global apx
@@ -22,5 +16,12 @@ def black_jack(n, m, card, arr, length):
         used[i] = 0
     return apx
 
+
+N, M = map(int, sys.stdin.readline().split())
+Card = list(map(int, sys.stdin.readline().split()))
+
+Arr = [0] * 3
+used = [0] * N
+apx = 0
 
 print(black_jack(N, M, Card, Arr, 0))
