@@ -23,6 +23,9 @@ int main(void)
             q.push({j, K});
             pq.push(K);
         }
+        cout << q.front() << "\n";
+        cout << pq.top() << "\n";
+        
         while (!q.empty())
         {
             int idx = q.front().first;
@@ -43,3 +46,14 @@ int main(void)
     }
     return 0;
 }
+/*
+3 - 전체 반복횟수
+1 0 - N,M 문서는 1개 알고싶은 인덱스는 0번째
+5 - 1개 문서의 중요도
+
+4 2  - N,M 문서는 4개 알고싶은 인덱스는 2번째
+1 2 3 4 - 4개 문서의 중요도
+
+6 0 - 대충 비슷한 내용
+1 1 9 1 1 1 - 이것도 대충 위에랑 비슷한 내용
+*/

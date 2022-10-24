@@ -15,7 +15,7 @@ int main(void)
         int cnt = 0;
         for (int j = 0;j < N;j++)
         {
-            if ()
+            if ("조건")
                 arr[i] = j;
                 cnt += 1;
         }
