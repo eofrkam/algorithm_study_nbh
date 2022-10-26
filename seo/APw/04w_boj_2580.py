@@ -1,47 +1,47 @@
 import sys
 
 
-def sector(value, col, row, board):
+def sector(row, col, board):
     flag = 1
-    x = (row // 3) * 3
-    y = (col // 3) * 3
-    for z in range(1, 3):
-        if board[y][x+z] != 0 and board[y][x+z] == value:
+    x = (col // 3) * 3
+    y = (row // 3) * 3
+    for z in range(0, 3):
+        if board[y][x+z] != 0 and board[y][x+z] == board[row][col]:
             flag = 0
-        if board[y+z][x] != 0 and board[y+z][x] == value:
+        if board[y+z][x] != 0 and board[y+z][x] == board[row][col]:
             flag = 0
-        for v in range(1, 3):
-            if board[y+v][x+z] != 0 and board[y+v][x+z] == value:
+        for v in range(0, 3):
+            if board[y+v][x+z] != 0 and board[y+v][x+z] == board[row][col]:
                 flag = 0
-            if board[y+z][x+v] != 0 and board[y+z][x+v] == value:
+            if board[y+z][x+v] != 0 and board[y+z][x+v] == board[row][col]:
                 flag = 0
     return flag
 
 
-def valid(col, row, board):
+def valid(row, col, board):
     for i in range(1, 10):
         flag = 1
         for j in range(0, 9):
-            if board[col][j] != 0 and board[col][j] == i:
+            if board[row][j] != 0 and board[row][j] == i:
                 flag = 0
-            elif board[j][row] != 0 and board[j][row] == i:
+            elif board[j][col] != 0 and board[j][col] == i:
                 flag = 0
-        if sector(i, col, row, board) == 0:
+        if sector(row, col, board) == 0:
             flag = 0
         if flag == 1:
-            board[col][row] = i
+            board[row][col] = i
 
 
-def sudoku(col, row, board):
-    if col == 8 and row == 9:
+def sudoku(row, col, board):
+    if row == 8 and col == 9:
         return
-    if row == 9:
-        col += 1
-        row = 0
+    if col == 9:
+        row += 1
+        col = 0
     else:
-        if board[col][row] == 0:
-            valid(col, row, board)
-    sudoku(col, row+1, board)
+        if board[row][col] == 0:
+            valid(row, col, board)
+    sudoku(row, col + 1, board)
 
 
 input_board = []
