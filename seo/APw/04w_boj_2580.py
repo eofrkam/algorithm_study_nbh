@@ -1,19 +1,19 @@
 import sys
 
 
-def sector(row, col, board):
+def sector(value, row, col, board):
     flag = 1
     x = (col // 3) * 3
     y = (row // 3) * 3
     for z in range(0, 3):
-        if board[y][x+z] != 0 and board[y][x+z] == board[row][col]:
+        if board[y][x+z] != 0 and board[y][x+z] == value:
             flag = 0
-        if board[y+z][x] != 0 and board[y+z][x] == board[row][col]:
+        if board[y+z][x] != 0 and board[y+z][x] == value:
             flag = 0
         for v in range(0, 3):
-            if board[y+v][x+z] != 0 and board[y+v][x+z] == board[row][col]:
+            if board[y+v][x+z] != 0 and board[y+v][x+z] == value:
                 flag = 0
-            if board[y+z][x+v] != 0 and board[y+z][x+v] == board[row][col]:
+            if board[y+z][x+v] != 0 and board[y+z][x+v] == value:
                 flag = 0
     return flag
 
@@ -26,7 +26,7 @@ def valid(row, col, board):
                 flag = 0
             elif board[j][col] != 0 and board[j][col] == i:
                 flag = 0
-        if sector(row, col, board) == 0:
+        if sector(i, row, col, board) == 0:
             flag = 0
         if flag == 1:
             board[row][col] = i
