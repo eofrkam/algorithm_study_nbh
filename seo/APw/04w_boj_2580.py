@@ -1,38 +1,30 @@
 import sys
 
 
-def sector(row, col, board):
+def sector(row, col, board, value):
     flag = 1
     x = (col // 3) * 3
     y = (row // 3) * 3
-    for z in range(0, 3):
-        if board[y][x+z] != 0 and board[y][x+z] == board[row][col]:
-            flag = 0
-        if board[y+z][x] != 0 and board[y+z][x] == board[row][col]:
-            flag = 0
-        for v in range(0, 3):
-            if board[y+v][x+z] != 0 and board[y+v][x+z] == board[row][col]:
-                flag = 0
-            if board[y+z][x+v] != 0 and board[y+z][x+v] == board[row][col]:
+    for z in range(y, y+3):
+        for v in range(x, x+3):
+            if board[z][v] == value:
                 flag = 0
     return flag
 
-# 값을 비교하고 넣어줄지, 값을 넣고 비교해줄지
-def valid(row, col, board):
-    for i in range(1, 10):
-        board[row][col] = i
-        flag = 1
-        for j in range(0, 9):
-            if col != j and board[row][j] == board[row][col]:
-                flag = 0
-            elif row != j and board[j][col] == board[row][col]:
-                flag = 0
-        if sector(row, col, board) == 0:
+
+def valid(row, col, board, value):
+    flag = 1
+    for j in range(0, 9):
+        if board[row][j] == value:
             flag = 0
-        if flag == 1:
-            board[row][col] = 0
+        if board[j][col] == value:
+            flag = 0
+    if sector(row, col, board, value) == 0:
+        flag = 0
+    return flag
 
 
+# 실패 했을때 0으로 바꿔주는 부분 필요
 def sudoku(row, col, board):
     if row == 8 and col == 9:
         return
@@ -41,7 +33,9 @@ def sudoku(row, col, board):
         col = 0
     else:
         if board[row][col] == 0:
-            valid(row, col, board)
+            for i in range(1, 10):
+                if valid(row, col, board, i) == 1:
+                    board[row][col] = i
     sudoku(row, col + 1, board)
 
 
