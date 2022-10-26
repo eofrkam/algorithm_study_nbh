@@ -1,35 +1,36 @@
 import sys
 
 
-def sector(value, row, col, board):
+def sector(row, col, board):
     flag = 1
     x = (col // 3) * 3
     y = (row // 3) * 3
     for z in range(0, 3):
-        if board[y][x+z] != 0 and board[y][x+z] == value:
+        if board[y][x+z] != 0 and board[y][x+z] == board[row][col]:
             flag = 0
-        if board[y+z][x] != 0 and board[y+z][x] == value:
+        if board[y+z][x] != 0 and board[y+z][x] == board[row][col]:
             flag = 0
         for v in range(0, 3):
-            if board[y+v][x+z] != 0 and board[y+v][x+z] == value:
+            if board[y+v][x+z] != 0 and board[y+v][x+z] == board[row][col]:
                 flag = 0
-            if board[y+z][x+v] != 0 and board[y+z][x+v] == value:
+            if board[y+z][x+v] != 0 and board[y+z][x+v] == board[row][col]:
                 flag = 0
     return flag
 
-
+# 값을 비교하고 넣어줄지, 값을 넣고 비교해줄지
 def valid(row, col, board):
     for i in range(1, 10):
+        board[row][col] = i
         flag = 1
         for j in range(0, 9):
-            if board[row][j] != 0 and board[row][j] == i:
+            if col != j and board[row][j] == board[row][col]:
                 flag = 0
-            elif board[j][col] != 0 and board[j][col] == i:
+            elif row != j and board[j][col] == board[row][col]:
                 flag = 0
-        if sector(i, row, col, board) == 0:
+        if sector(row, col, board) == 0:
             flag = 0
         if flag == 1:
-            board[row][col] = i
+            board[row][col] = 0
 
 
 def sudoku(row, col, board):
