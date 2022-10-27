@@ -5,11 +5,11 @@ def rec(st, en, op, res, a):
     if st == en:
         print(*res)
         return
-    for i in op:
+    for i in range(len(op)):
         if used[i] == 1:
             continue
         used[i] = 1
-        res[st] = i
+        res[st] = op[i]
         rec(st + 1, en, op, res, a)
         used[i] = 0
 
@@ -35,5 +35,7 @@ for n in range(N-1):
 
 comb = [0] * len(operator)
 used = [0] * 5
+
+print(operator)
 
 rec(0, len(operator), operator, comb, A)
