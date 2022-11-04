@@ -31,7 +31,7 @@ algorithm_study_nbh - 자료구조와 알고리즘 문제를 해결합니다.
 
 # 5주차 - 그래프, 그래프 순회
   01. [알고리즘 수업 - 깊이 우선 탐색 1](https://www.acmicpc.net/problem/24479)
-  02. [알고리즘 수업 - 너비 우선 DFS와 BFS탐색 1](https://www.acmicpc.net/problem/24444)
+  02. [알고리즘 수업 - 너비 우선 탐색 1](https://www.acmicpc.net/problem/24444)
   03. [DFS와 BFS](https://www.acmicpc.net/problem/1260)
   04. [단지번호붙이기](https://www.acmicpc.net/problem/2667)
   05. [토마토](https://www.acmicpc.net/problem/7576)
